@@ -18,10 +18,9 @@
     <script>
         let i = 0;
         const muter = () =>{
-            i+= 1;
             let inputValue = document.getElementById("iNumber").value; 
             document.getElementById("oText").innerHTML = inputValue; 
-            if (i===1){
+            if (i===0){
                 document.getElementById("oText").innerHTML = inputValue; 
             }else{
                 if(inputValue === 0){
@@ -34,7 +33,7 @@
                     document.getElementById("oText").innerHTML = "Buzz";
                 }
             }
-            
+            i+= 1;
         };
     </script>
 </body>
