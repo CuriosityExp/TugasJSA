@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get a FizzBuzz Result!</h1>
+    <form>
+        <label for="iNumber">Type a number:</label>
+        <input type="number" id="iNumber" name="iNumber">
+        <button type="button" id="bButton" name="bButton" onclick="muter()">Check!</button><br>
+        <textarea id="oText"></textarea>
+    </form>
+    <script>
+        let i = 0;
+        const muter = () =>{
+            i+= 1;
+            let inputValue = document.getElementById("iNumber").value; 
+            document.getElementById("oText").innerHTML = inputValue; 
+            if (i===0){
+                document.getElementById("oText").innerHTML = inputValue; 
+            }else{
+                if(inputValue === 0){
+                    document.getElementById("oText").innerHTML = "Invalid Value";
+                }else if(inputValue % 3 === 0 && inputValue % 5 === 0){
+                    document.getElementById("oText").innerHTML = "FizzBuzz";
+                }else if(inputValue % 3 === 0){
+                    document.getElementById("oText").innerHTML = "Fizz";
+                }else if(inputValue % 5 === 0){
+                    document.getElementById("oText").innerHTML = "Buzz";
+                }
+            }
+            
+        };
+    </script>
+</body>
+</html>
